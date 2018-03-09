@@ -10,7 +10,8 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}\\src\\index.js",
             "env": {
-                "JWT_SECRET": "JWT_SECRET"
+                "JWT_SECRET": "JWT_SECRET",
+                "MASTER_KEY": "MASTER_KEY"
             }
         }
     ]
