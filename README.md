@@ -39,8 +39,7 @@ If you choose to generate the authentication API, you can start to play with it.
 
 Create a user (sign up):
 ```bash
-# curl -X POST http://0.0.0.0:9000/users -i -d "email=test@example.com&password=123456&access_token=MASTER_KEY_HERE"
-curl -X POST http://0.0.0.0:9000/users -i -d "email=test@example.com&password=123456"
+curl -X POST http://0.0.0.0:9000/users -i -d "email=test@example.com&password=123456&access_token=MASTER_KEY_HERE"
 ```
 
 It will return something like:
@@ -58,8 +57,7 @@ HTTP/1.1 201 Created
 
 Authenticate the user (sign in):
 ```bash
-# curl -X POST http://0.0.0.0:9000/auth -i -u test@example.com:123456 -d "access_token=MASTER_KEY_HERE"
-curl -X POST http://0.0.0.0:9000/auth -i -u test@example.com:123456
+curl -X POST http://0.0.0.0:9000/auth -i -u test@example.com:123456 -d "access_token=MASTER_KEY_HERE"
 ```
 
 It will return something like:
@@ -115,8 +113,7 @@ heroku git:remote --app my-new-app
 heroku addons:create mongolab
 
 # set the environment variables to the heroku app (see the .env file in root directory)
-# heroku config:set MASTER_KEY=masterKey JWT_SECRET=jwtSecret
-heroku config:set JWT_SECRET=jwtSecret
+heroku config:set MASTER_KEY=masterKey JWT_SECRET=jwtSecret
 
 # commit and push the files
 git add -A
